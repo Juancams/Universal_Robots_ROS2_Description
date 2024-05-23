@@ -101,7 +101,7 @@
     script_sender_port="$(arg script_sender_port)"
     trajectory_port="$(arg trajectory_port)"
   >
-    <origin xyz="0 1.5 0" rpy="0 0 0" />          <!-- position robot in the world -->
+    <origin xyz="-1.8 -1.6 0.7" rpy="0 0 0" />          <!-- position robot in the world -->
   </xacro:ur_robot>
 
   <!-- arm ur10-->
@@ -141,8 +141,9 @@
     reverse_port="$(arg reverse_port)"
     script_sender_port="$(arg script_sender_port)"
     trajectory_port="$(arg trajectory_port)"
+    generate_base="true"
   >
-    <origin xyz="0 -1.5 0" rpy="0 0 0" />          <!-- position robot in the world -->
+    <origin xyz="0 -2.39 1" rpy="-1.56 0 0" />          <!-- position robot in the world -->
   </xacro:ur_robot>
 
   <xacro:sensor_d435i name="ur5_camera" parent="ur5_wrist_3_link" use_nominal_extrinsics="true">

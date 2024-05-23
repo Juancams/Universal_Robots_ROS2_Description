@@ -161,6 +161,13 @@
         <state_interface name="velocity"/>
         <state_interface name="effort"/>
       </joint>
+      <joint name="${tf_prefix}rail_joint">
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
 
       <xacro:unless value="${sim_gazebo or sim_ignition}">
         <sensor name="${tf_prefix}tcp_fts_sensor">
